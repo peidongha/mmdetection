@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="GamePulse 是一个适合年轻玩家的游戏攻略站模板，包含热门攻略、版本情报、角色配装、速通路线与社区互动模块。"
+    />
+    <meta name="theme-color" content="#7c3cff" />
+    <title>GamePulse 青年游戏攻略站</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div class="noise" aria-hidden="true"></div>
+    <header class="site-header">
+      <nav class="navbar" aria-label="主导航">
+        <a class="brand" href="#top" aria-label="GamePulse 首页">
+          <span class="brand-mark">GP</span>
+          <span>GamePulse</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+          <span class="sr-only">打开菜单</span>
+        </button>
+        <div class="nav-links" id="nav-links">
+          <a href="#guides">攻略库</a>
+          <a href="#patch">版本情报</a>
+          <a href="#tools">实用工具</a>
+          <a href="#community">玩家社区</a>
+        </div>
+        <a class="nav-cta" href="#submit">投稿攻略</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <p class="eyebrow">NEW META · 每日更新 · 零废话攻略</p>
+          <h1>把复杂游戏，打成<span>高光时刻</span>。</h1>
+          <p class="hero-text">
+            为年轻玩家打造的游戏攻略网站：版本答案、角色配装、地图收集、速通路线和新手避坑，一屏看懂，一键开打。
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#guides">马上查攻略</a>
+            <a class="btn ghost" href="#deploy">部署说明</a>
+          </div>
+          <div class="hero-stats" aria-label="站点数据">
+            <div><strong>128+</strong><span>精选攻略</span></div>
+            <div><strong>24h</strong><span>版本追踪</span></div>
+            <div><strong>4.9</strong><span>玩家评分</span></div>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="本周热门攻略卡片">
+          <div class="card-glow"></div>
+          <div class="game-cover">
+            <span class="live-dot"></span>
+            <span>Season 09</span>
+          </div>
+          <div class="quest-panel">
+            <div>
+              <p>本周冲榜路线</p>
+              <h2>暗影裂隙 15 分钟速通</h2>
+            </div>
+            <span class="tag hot">HOT</span>
+          </div>
+          <ul class="check-list">
+            <li>开局资源点与安全撤离路线</li>
+            <li>Boss 三阶段技能轴与躲避时机</li>
+            <li>平民配装替代方案</li>
+          </ul>
+          <a class="mini-link" href="#guides">查看完整流程 →</a>
+        </div>
+      </section>
+
+      <section class="section-shell search-section" id="guides">
+        <div class="section-heading">
+          <p class="eyebrow">GUIDE HUB</p>
+          <h2>攻略库</h2>
+          <p>输入关键词或选择标签，快速找到你要的打法。</p>
+        </div>
+        <div class="search-box">
+          <input id="guide-search" type="search" placeholder="搜索：角色、Boss、装备、地图..." aria-label="搜索攻略" />
+          <button type="button" id="clear-search">清空</button>
+        </div>
+        <div class="chips" aria-label="攻略标签筛选">
+          <button class="chip active" data-filter="all">全部</button>
+          <button class="chip" data-filter="newbie">新手</button>
+          <button class="chip" data-filter="meta">强度榜</button>
+          <button class="chip" data-filter="route">路线</button>
+          <button class="chip" data-filter="gear">配装</button>
+        </div>
+        <div class="guide-grid" id="guide-grid">
+          <article class="guide-card" data-tags="newbie gear" data-title="零氪开荒资源规划">
+            <span class="tag">新手必看</span>
+            <h3>零氪开荒资源规划</h3>
+            <p>前 7 天体力、抽卡、金币优先级，帮你少走弯路。</p>
+            <div class="card-meta"><span>8 分钟读完</span><span>收藏 12k</span></div>
+          </article>
+          <article class="guide-card" data-tags="meta gear" data-title="S 级角色配装模板">
+            <span class="tag violet">强度榜</span>
+            <h3>S 级角色配装模板</h3>
+            <p>主词条、副词条、武器替代和队伍循环一张表搞定。</p>
+            <div class="card-meta"><span>持续更新</span><span>热度 98%</span></div>
+          </article>
+          <article class="guide-card" data-tags="route newbie" data-title="全地图宝箱收集路线">
+            <span class="tag cyan">路线党</span>
+            <h3>全地图宝箱收集路线</h3>
+            <p>按区域拆分路线，适合边看边跑，漏拿也能快速补。</p>
+            <div class="card-meta"><span>含清单</span><span>35 张图</span></div>
+          </article>
+          <article class="guide-card" data-tags="meta route" data-title="深渊高分阵容轮换">
+            <span class="tag pink">冲榜</span>
+            <h3>深渊高分阵容轮换</h3>
+            <p>针对不同词缀提供 3 套阵容，附技能释放节奏。</p>
+            <div class="card-meta"><span>高阶</span><span>评分 4.9</span></div>
+          </article>
+          <article class="guide-card" data-tags="gear" data-title="Boss 机制与反制装备">
+            <span class="tag orange">Boss</span>
+            <h3>Boss 机制与反制装备</h3>
+            <p>技能预警、破盾窗口、抗性要求和容错装备推荐。</p>
+            <div class="card-meta"><span>15 分钟</span><span>视频版</span></div>
+          </article>
+          <article class="guide-card" data-tags="newbie meta" data-title="版本答案速查表">
+            <span class="tag green">速查</span>
+            <h3>版本答案速查表</h3>
+            <p>角色、武器、活动兑换优先级，用手机也能舒服查看。</p>
+            <div class="card-meta"><span>置顶</span><span>今日更新</span></div>
+          </article>
+        </div>
+        <p class="empty-state" id="empty-state">没有找到相关攻略，换个关键词试试。</p>
+      </section>
+
+      <section class="section-shell patch-section" id="patch">
+        <div class="section-heading compact">
+          <p class="eyebrow">PATCH RADAR</p>
+          <h2>版本情报雷达</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <span>05/07</span>
+            <h3>平衡性改动解析</h3>
+            <p>热门角色伤害曲线调整，低成本队伍迎来新机会。</p>
+          </article>
+          <article>
+            <span>05/10</span>
+            <h3>限时活动路线</h3>
+            <p>活动货币兑换优先级和每日 20 分钟高收益路线。</p>
+          </article>
+          <article>
+            <span>05/14</span>
+            <h3>新 Boss 机制预习</h3>
+            <p>提前整理阶段转换、属性抗性与推荐站位。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section-shell tools-section" id="tools">
+        <div class="section-heading">
+          <p class="eyebrow">PLAYER TOOLS</p>
+          <h2>实用工具</h2>
+          <p>不用登录也能用，适合后续接入你的真实数据。</p>
+        </div>
+        <div class="tools-grid">
+          <div class="tool-card">
+            <span>01</span>
+            <h3>养成材料计算器</h3>
+            <p>选择角色等级与技能等级，自动汇总缺口材料。</p>
+          </div>
+          <div class="tool-card">
+            <span>02</span>
+            <h3>配装评分器</h3>
+            <p>把词条权重做成可配置方案，方便不同流派切换。</p>
+          </div>
+          <div class="tool-card">
+            <span>03</span>
+            <h3>抽卡预算表</h3>
+            <p>按保底、月卡和活动奖励估算抽数，避免冲动消费。</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-shell community-section" id="community">
+        <div class="community-card">
+          <div>
+            <p class="eyebrow">COMMUNITY</p>
+            <h2>让玩家一起把攻略变强</h2>
+            <p>支持投稿、纠错、投票和热门评论位，后续可接入论坛、Discord、QQ群或微信公众号。</p>
+          </div>
+          <a class="btn primary" href="#submit">加入共创</a>
+        </div>
+      </section>
+
+      <section class="section-shell submit-section" id="submit">
+        <div class="section-heading compact">
+          <p class="eyebrow">SUBMIT</p>
+          <h2>投稿攻略</h2>
+          <p>当前模板为前端演示，表单会在本地显示提交成功；部署后可接入 Formspree、飞书表格或自建后端。</p>
+        </div>
+        <form class="submit-form" id="submit-form">
+          <label>
+            攻略标题
+            <input type="text" name="title" placeholder="例如：新 Boss 平民打法" required />
+          </label>
+          <label>
+            攻略类型
+            <select name="category" required>
+              <option value="">请选择</option>
+              <option>新手攻略</option>
+              <option>角色配装</option>
+              <option>地图路线</option>
+              <option>版本解析</option>
+            </select>
+          </label>
+          <label class="wide">
+            攻略亮点
+            <textarea name="summary" rows="4" placeholder="写下你的核心思路、适用场景和注意事项" required></textarea>
+          </label>
+          <button class="btn primary" type="submit">提交投稿</button>
+          <p class="form-message" id="form-message" role="status"></p>
+        </form>
+      </section>
+
+      <section class="section-shell deploy-section" id="deploy">
+        <div class="deploy-card">
+          <p class="eyebrow">DEPLOY READY</p>
+          <h2>买好域名后就能上线</h2>
+          <ol>
+            <li>把 <code>game-guide-site</code> 文件夹上传到 Netlify、Vercel、Cloudflare Pages 或你的服务器。</li>
+            <li>平台构建设置选择“静态站点”，无需安装依赖，发布目录填 <code>game-guide-site</code>。</li>
+            <li>在域名服务商添加平台提示的 CNAME 或 A 记录，等待 DNS 生效。</li>
+          </ol>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 GamePulse. 为热爱开荒、冲榜和整活的玩家而生。</p>
+      <a href="#top">回到顶部 ↑</a>
+    </footer>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
