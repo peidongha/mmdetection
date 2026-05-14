@@ -1,0 +1,30 @@
+<view class="container">
+  <view class="card hero">
+    <view class="eyebrow">Route Book</view>
+    <view class="title">骑行路书攻略</view>
+    <view class="subtitle">覆盖自行车与摩托车，把路线、补给、撤退点、油站、住宿、风险提醒做成可复用商品。</view>
+    <button class="button-primary" bindtap="generateRoute">生成我的路书</button>
+  </view>
+
+  <view class="card">
+    <view class="tag-row">
+      <block wx:for="{{vehicles}}" wx:key="*this">
+        <text class="pill {{activeVehicle === item ? 'active-pill' : ''}}" data-vehicle="{{item}}" bindtap="setVehicle">{{item}}</text>
+      </block>
+    </view>
+  </view>
+
+  <view class="card">
+    <block wx:for="{{filteredRoutes}}" wx:key="id">
+      <view class="list-item">
+        <view class="item-title">{{item.vehicle}}｜{{item.title}}</view>
+        <view class="item-meta">{{item.distance}} · {{item.duration}} · {{item.difficulty}} · {{item.price}}</view>
+        <view class="tag-row">
+          <block wx:for="{{item.highlights}}" wx:key="*this" wx:for-item="highlight">
+            <text class="pill">{{highlight}}</text>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

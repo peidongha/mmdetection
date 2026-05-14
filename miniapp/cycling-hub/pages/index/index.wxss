@@ -1,0 +1,4 @@
+.hero .button-primary {
+  background: #ffffff;
+  color: #0f766e;
+}

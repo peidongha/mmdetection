@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="card hero">
+    <view class="eyebrow">Profile & Ops</view>
+    <view class="title">{{user.nickname}}</view>
+    <view class="subtitle">{{user.membership}} · {{user.points}} 骑行能量</view>
+  </view>
+
+  <view class="card">
+    <view class="eyebrow">Revenue Console</view>
+    <view class="title">运营收益看板</view>
+    <block wx:for="{{monetization}}" wx:key="label">
+      <view class="list-item">
+        <view class="item-title">{{item.label}}：{{item.value}}</view>
+        <view class="item-meta">{{item.note}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="eyebrow">Launch</view>
+    <view class="title">快速上线清单</view>
+    <block wx:for="{{launchChecklist}}" wx:key="*this">
+      <view class="list-item">
+        <view class="item-meta">{{index + 1}}. {{item}}</view>
+      </view>
+    </block>
+  </view>
+</view>

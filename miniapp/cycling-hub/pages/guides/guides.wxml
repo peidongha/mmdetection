@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="card">
+    <view class="eyebrow">Modification Guide</view>
+    <view class="title">骑行改装攻略</view>
+    <view class="subtitle">用“车型 + 预算 + 场景 + 合规风险”生成升级清单，并把高意向用户导入认证门店。</view>
+    <view class="tag-row">
+      <block wx:for="{{vehicles}}" wx:key="*this">
+        <text class="pill {{activeVehicle === item ? 'active-pill' : ''}}" data-vehicle="{{item}}" bindtap="setVehicle">{{item}}</text>
+      </block>
+    </view>
+  </view>
+
+  <view class="card">
+    <view class="eyebrow">Bike Categories</view>
+    <view class="subtitle">自行车细分：{{bikeTypeText}}</view>
+  </view>
+
+  <view class="card">
+    <block wx:for="{{filteredGuides}}" wx:key="id">
+      <view class="list-item">
+        <view class="item-title">{{item.type}}｜{{item.title}}</view>
+        <view class="item-meta">预算：{{item.budget}} · 难度：{{item.difficulty}}</view>
+        <view class="item-meta">收益点：{{item.revenue}}</view>
+        <view class="tag-row">
+          <block wx:for="{{item.tags}}" wx:key="*this" wx:for-item="tag">
+            <text class="pill">{{tag}}</text>
+          </block>
+        </view>
+        <button class="button-primary" data-title="{{item.type}}" bindtap="reserveService">预约门店/获取清单</button>
+      </view>
+    </block>
+  </view>
+</view>

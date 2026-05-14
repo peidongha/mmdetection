@@ -1,0 +1,4 @@
+.active-pill {
+  background: #0f766e;
+  color: #ffffff;
+}
