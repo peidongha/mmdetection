@@ -74,6 +74,44 @@ const routeBooks = [
   }
 ]
 
+
+const healthProfiles = [
+  {
+    id: 'newcomer',
+    name: '新手恢复型',
+    suitableFor: '久坐、睡眠一般、最近运动少的骑友',
+    riskLevel: '低强度优先',
+    weeklyPlan: '每周 3 次，每次 30-45 分钟，心率控制在轻松可交谈区间',
+    trainingFocus: ['低强度有氧', '关节适应', '骑后拉伸'],
+    caution: '如出现胸闷、眩晕、膝盖刺痛，应立即停止并咨询医生。'
+  },
+  {
+    id: 'fat-loss',
+    name: '减脂耐力型',
+    suitableFor: '希望控制体重、提升基础耐力的骑友',
+    riskLevel: '循序渐进',
+    weeklyPlan: '每周 4 次：2 次 Zone2 有氧、1 次节奏骑、1 次轻松恢复骑',
+    trainingFocus: ['Zone2', '踏频稳定', '补水补给'],
+    caution: '避免空腹高强度训练，长距离骑行需要补充碳水和电解质。'
+  },
+  {
+    id: 'performance',
+    name: '进阶提升型',
+    suitableFor: '有稳定骑行基础，想提升速度、爬坡或长距离能力的骑友',
+    riskLevel: '强度受控',
+    weeklyPlan: '每周 5 次：2 次间歇、2 次有氧、1 次长距离，并安排至少 1 天完全休息',
+    trainingFocus: ['间歇训练', '爬坡力量', '恢复监测'],
+    caution: '连续疲劳、静息心率异常升高或睡眠变差时，应降低训练量。'
+  }
+]
+
+const healthMetrics = [
+  { label: '身体状态评分', value: '72/100', note: '综合睡眠、疲劳、运动基础与疼痛风险' },
+  { label: '本周建议骑行', value: '3-5 次', note: '根据目标和恢复状态动态调整' },
+  { label: '单次建议时长', value: '30-90 分钟', note: '新手先控时长，进阶再控强度' },
+  { label: '风险提醒', value: '先稳后快', note: '健康建议不替代专业医疗诊断' }
+]
+
 const communityPosts = [
   {
     id: 'post-001',
@@ -105,6 +143,7 @@ const monetization = [
   { label: '改装预约转化', value: '8%-15%', note: '攻略页沉淀需求，导入认证门店履约' },
   { label: '付费路书客单', value: '¥9.9-39.9', note: '达人共创，平台抽佣并提供导航模板' },
   { label: '会员权益', value: '¥19/月', note: '救援、保险、折扣、专属社群' },
+  { label: 'AI训练服务', value: '¥29/月', note: '训练订阅、教练复核、设备数据增值' },
   { label: '品牌合作', value: 'CPS/CPA', note: '配件测评、试骑活动、团购' }
 ]
 
@@ -112,5 +151,7 @@ module.exports = {
   modificationGuides,
   routeBooks,
   communityPosts,
-  monetization
+  monetization,
+  healthProfiles,
+  healthMetrics
 }

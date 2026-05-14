@@ -3,6 +3,7 @@
     <view class="eyebrow">Profile & Ops</view>
     <view class="title">{{user.nickname}}</view>
     <view class="subtitle">{{user.membership}} · {{user.points}} 骑行能量</view>
+    <button class="button-primary" bindtap="goToHealth">打开AI健康智能助手</button>
   </view>
 
   <view class="card">

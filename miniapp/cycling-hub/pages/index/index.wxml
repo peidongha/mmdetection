@@ -9,6 +9,7 @@
       </block>
     </view>
     <button class="button-primary" bindtap="goToGuides">开始匹配改装方案</button>
+    <button class="button-ghost" bindtap="goToHealth">AI生成健康训练计划</button>
   </view>
 
   <view class="card">

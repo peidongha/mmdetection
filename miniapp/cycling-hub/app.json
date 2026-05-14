@@ -4,7 +4,8 @@
     "pages/guides/guides",
     "pages/routes/routes",
     "pages/community/community",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/health/health"
   ],
   "window": {
     "navigationBarTitleText": "骑友共创营",
