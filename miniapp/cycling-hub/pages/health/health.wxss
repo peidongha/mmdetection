@@ -1,0 +1,29 @@
+.form-row {
+  border-top: 1rpx solid #e2e8f0;
+  padding: 24rpx 0 12rpx;
+}
+
+.form-row:first-of-type {
+  border-top: 0;
+}
+
+.picker-line {
+  background: #f8fafc;
+  border-radius: 18rpx;
+  color: #0f172a;
+  font-size: 27rpx;
+  font-weight: 700;
+  margin-top: 16rpx;
+  padding: 22rpx;
+}
+
+.warning-box {
+  background: #fff7ed;
+  border: 1rpx solid #fed7aa;
+  border-radius: 20rpx;
+  color: #9a3412;
+  font-size: 25rpx;
+  line-height: 1.6;
+  margin-top: 20rpx;
+  padding: 22rpx;
+}

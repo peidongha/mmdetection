@@ -1,0 +1,75 @@
+<view class="container">
+  <view class="card hero">
+    <view class="eyebrow">AI Health Assistant</view>
+    <view class="title">AI健康智能助手</view>
+    <view class="subtitle">根据年龄、骑行基础、睡眠、疲劳、静息心率和疼痛风险，推荐更安全的骑行计划与训练方案。</view>
+  </view>
+
+  <view class="card">
+    <view class="eyebrow">Body Status</view>
+    <view class="title">个人身体状态采集</view>
+
+    <view class="form-row">
+      <view class="item-title">年龄：{{form.age}} 岁</view>
+      <slider min="16" max="75" value="{{form.age}}" data-field="age" bindchange="updateSlider" activeColor="#0f766e" />
+    </view>
+
+    <view class="form-row">
+      <view class="item-title">周骑行量：{{form.weeklyDistance}} km</view>
+      <slider min="0" max="300" step="5" value="{{form.weeklyDistance}}" data-field="weeklyDistance" bindchange="updateSlider" activeColor="#0f766e" />
+    </view>
+
+    <view class="form-row">
+      <view class="item-title">静息心率：{{form.restingHeartRate}} bpm</view>
+      <slider min="45" max="110" value="{{form.restingHeartRate}}" data-field="restingHeartRate" bindchange="updateSlider" activeColor="#0f766e" />
+    </view>
+
+    <view class="form-row">
+      <view class="item-title">疲劳程度：{{form.fatigue}} / 10</view>
+      <slider min="1" max="10" value="{{form.fatigue}}" data-field="fatigue" bindchange="updateSlider" activeColor="#0f766e" />
+    </view>
+
+    <picker mode="selector" range="{{goals}}" value="{{form.goalIndex}}" data-field="goalIndex" bindchange="updatePicker">
+      <view class="picker-line">训练目标：{{selectedGoal}}</view>
+    </picker>
+    <picker mode="selector" range="{{sleepOptions}}" value="{{form.sleepIndex}}" data-field="sleepIndex" bindchange="updatePicker">
+      <view class="picker-line">睡眠情况：{{selectedSleep}}</view>
+    </picker>
+    <picker mode="selector" range="{{painOptions}}" value="{{form.painIndex}}" data-field="painIndex" bindchange="updatePicker">
+      <view class="picker-line">身体不适：{{selectedPain}}</view>
+    </picker>
+  </view>
+
+  <view class="card">
+    <view class="eyebrow">AI Recommendation</view>
+    <view class="title">{{recommendation.name}}</view>
+    <view class="subtitle">适合：{{recommendation.suitableFor}}</view>
+    <view class="list-item">
+      <view class="item-title">推荐骑行计划</view>
+      <view class="item-meta">{{recommendation.weeklyPlan}}</view>
+    </view>
+    <view class="list-item">
+      <view class="item-title">训练重点</view>
+      <view class="tag-row">
+        <block wx:for="{{recommendation.trainingFocus}}" wx:key="*this">
+          <text class="pill">{{item}}</text>
+        </block>
+      </view>
+    </view>
+    <view class="warning-box">{{recommendation.caution}}</view>
+    <button class="button-primary" bindtap="bookCoach">预约教练复核/生成完整训练表</button>
+  </view>
+
+  <view class="card">
+    <view class="eyebrow">Health Metrics</view>
+    <view class="title">健康训练指标</view>
+    <view class="grid">
+      <block wx:for="{{healthMetrics}}" wx:key="label">
+        <view class="metric">
+          <view class="metric-value">{{item.value}}</view>
+          <view class="metric-label">{{item.label}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

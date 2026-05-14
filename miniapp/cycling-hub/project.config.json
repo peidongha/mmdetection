@@ -1,0 +1,18 @@
+{
+  "description": "骑友共创营：改装攻略、路书攻略、社区经验分享小程序",
+  "packOptions": {
+    "ignore": []
+  },
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "latest",
+  "appid": "touristappid",
+  "projectname": "cycling-hub",
+  "condition": {}
+}

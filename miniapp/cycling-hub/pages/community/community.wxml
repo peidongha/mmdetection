@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="card">
+    <view class="eyebrow">Community</view>
+    <view class="title">社区讨论分享经验</view>
+    <view class="subtitle">从“闲聊社区”升级为“问题解决市场”：问题、答案、路书、门店案例都能沉淀为平台资产。</view>
+    <button class="button-primary" bindtap="publishPost">我要发布</button>
+  </view>
+
+  <view class="card">
+    <view class="eyebrow">Incentive</view>
+    <block wx:for="{{contributionRules}}" wx:key="*this">
+      <view class="list-item">
+        <view class="item-meta">{{index + 1}}. {{item}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="card">
+    <block wx:for="{{communityPosts}}" wx:key="id">
+      <view class="list-item">
+        <view class="item-title">{{item.title}}</view>
+        <view class="item-meta">{{item.author}} · {{item.replies}} 条回复 · {{item.reward}}</view>
+        <view class="tag-row">
+          <block wx:for="{{item.tags}}" wx:key="*this" wx:for-item="tag">
+            <text class="pill">{{tag}}</text>
+          </block>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="card hero">
+    <view class="eyebrow">Cycling Growth Mini Program</view>
+    <view class="title">骑友共创营：让攻略、路书、社区变成可交易服务</view>
+    <view class="subtitle">用问诊式改装推荐、达人路书分佣和本地门店履约，帮助骑友少走弯路，也让平台获得持续收益。</view>
+    <view class="tag-row">
+      <block wx:for="{{heroTags}}" wx:key="*this">
+        <text class="pill">{{item}}</text>
+      </block>
+    </view>
+    <button class="button-primary" bindtap="goToGuides">开始匹配改装方案</button>
+    <button class="button-ghost" bindtap="goToHealth">AI生成健康训练计划</button>
+  </view>
+
+  <view class="card">
+    <view class="eyebrow">Three Pillars</view>
+    <view class="title">3 个核心板块</view>
+    <block wx:for="{{sections}}" wx:key="title">
+      <view class="list-item">
+        <view class="item-title">{{index + 1}}. {{item.title}}</view>
+        <view class="item-meta">{{item.desc}}</view>
+      </view>
+    </block>
+  </view>
+
+  <view class="card">
+    <view class="eyebrow">Business Model</view>
+    <view class="title">收益闭环</view>
+    <view class="grid">
+      <block wx:for="{{monetization}}" wx:key="label">
+        <view class="metric">
+          <view class="metric-value">{{item.value}}</view>
+          <view class="metric-label">{{item.label}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>
